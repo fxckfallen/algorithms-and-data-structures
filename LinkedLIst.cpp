@@ -42,7 +42,7 @@ public:
 		else
 		{
 			Node<T>* current = this->head;
-			for (int i = 0; i < Size-1; ++i) current = current->pNext;
+			for (int i = 0; i < Size - 1; ++i) current = current->pNext;
 			current->pNext = new Node<T>(data);
 		}
 		Size++;
@@ -69,12 +69,12 @@ public:
 	}
 	void insert(T data, int index) {
 		if (index == 0) {
-			push_front(data)
+			push_front(data);
 		}
 		else {
 			Node<T>* previous = this->head;
 			for (int i = 0; i < index - 1; ++i) previous = previous->pNext;
-			
+
 			previous->pNext = new Node<T>(data, previous->pNext);
 
 			Size++;
